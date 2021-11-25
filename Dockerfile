@@ -7,3 +7,5 @@ COPY package.json ./
 COPY package-lock.json ./
 
 #COPY package*.json ./  copia todo para no teer que poner uno tras otro 
+
+RUN npm install
