@@ -1,0 +1,14 @@
+version: "3" # versión con la que vamos a trabajar
+
+services:  # los servicios que voy a usar
+  app:  # nombre del contenedor
+    container_name: appnode #nombre del contenedor
+    restart: always # cuando inicia el contenedor siempre se reinicia
+    build: . #que el archivo se contruya de raíz (docker file) el punto es para que se contruya de forma automatica
+    ports:  # puertos
+      - "5000:3000"
+  mongo:  # nombre del contenedor
+    container_name: bdmongo #nombre del contenedor (mi identificador)
+    imagen: mongo #nombre de la imagen (en nuestro caso la imagen más nueva será usada)
+    ports: # puertos, usaré el 27018 para evitar conflictos con mongo a manera local
+      - "27018:27017"
