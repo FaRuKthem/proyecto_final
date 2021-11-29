@@ -6,6 +6,10 @@ services:  # los servicios que voy a usar
     build: . #que el archivo se contruya de raíz (docker file) el punto es para que se contruya de forma automatica
     ports:  # puertos
       - "5000:3000"
+    links:
+      - mongo
+    volumes:
+      - .:/usr/src/app # copia todo lo que existe en esta ubicación 
   mongo:  # nombre del contenedor
     container_name: bdmongo #nombre del contenedor (mi identificador)
     image: mongo #nombre de la imagen (en nuestro caso la imagen más nueva será usada)
