@@ -14,16 +14,24 @@ services:  # los servicios que voy a usar
     container_name: bdmongo #nombre del contenedor (mi identificador)
     image: mongo #nombre de la imagen (en nuestro caso la imagen más nueva será usada)
     ports: # puertos, usaré el 27018 para evitar conflictos con mongo de forma local
-      - "27018:27017"
-    logging:
-      driver: none
+      - "27017:27017"
+    environment:
+      ME_CONFIG_MONGODB_AUTH_USERNAME: root
+      ME_CONFIG_MONGODB_AUTH_PASSWORD: clave
 
-mongo-express:configs:
-  image: mongo-express
-  restart: always
-  ports:
-    -8081:8081
-  environment:
-    ME_CONFIG_MONGODB_ADMINUSERNAME: root
-    ME_CONFIG_MONGODB_ADMINPASSWORD: example
-    ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+  mongo-express:
+        image: mongo-express
+        environment:
+            - ME_CONFIG_MONGODB_SERVER=mongo
+            - ME_CONFIG_MONGODB_PORT=27017
+            - ME_CONFIG_MONGODB_ENABLE_ADMIN=false
+            - ME_CONFIG_MONGODB_AUTH_DATABASE=admin
+            - ME_CONFIG_MONGODB_AUTH_USERNAME=root
+            - ME_CONFIG_MONGODB_AUTH_PASSWORD=clave
+            - ME_CONFIG_BASICAUTH_USERNAME=MONGOEXPRESS_LOGIN
+            - ME_CONFIG_BASICAUTH_PASSWORD=MONGOEXPRESS_PASSWORD
+            - ME_CONFIG_MONGODB_URL=mongodb://root:clave@mongo:27017/
+        depends_on:
+            - mongo
+        ports:
+          - "8080:8081"
