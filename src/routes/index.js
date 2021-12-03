@@ -1,8 +1,8 @@
 const {Router} = require('express');
 const router = Router();
 
-router.get('/',(req,res)=>{
-    console.log('HOME');
+router.get('/',(req,res, next)=>{
+    res.render('index.ejs');
 });
 
 router.get('/signup',(req, res, next) => {
