@@ -14,7 +14,7 @@ services:  # los servicios que voy a usar
     container_name: bdmongo #nombre del contenedor (mi identificador)
     image: mongo #nombre de la imagen (en nuestro caso la imagen más nueva será usada)
     ports: # puertos, usaré el 27018 para evitar conflictos con mongo de forma local
-      - "27017:27017"
+      - "27018:27017"
     environment:
       ME_CONFIG_MONGODB_AUTH_USERNAME: root
       ME_CONFIG_MONGODB_AUTH_PASSWORD: clave

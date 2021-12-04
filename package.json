@@ -1,7 +1,6 @@
 {
   "name": "proyecto_final",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/server.js"
@@ -23,12 +22,16 @@
     "ejs-mate": "^3.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
-    "mongoose": "^6.0.13",
+    "key.js": "^1.0.7",
+    "mongo-express": "^1.0.0-alpha.4",
+    "mongoose": "^6.0.14",
     "morgan": "^1.10.0",
     "passport": "^0.5.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "start": "^5.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "description": ""
 }
