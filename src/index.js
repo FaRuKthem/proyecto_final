@@ -6,6 +6,7 @@ const morgan = require('morgan');
 const passport = require('passport');
 const session = require('express-session');
 const flash = require('connect-flash');
+const nodemon = require('nodemon');
 
 
 
@@ -48,3 +49,15 @@ app.use('/', require('./routes/index'));
 
 //Incio de servidor 
 console.log('SERVIDOR EN PUERTO',3000);
+
+//nodemon
+
+//var mongoose = require('mongoose');
+
+//module.exports = mongoose.model('User', {
+
+  // email : String ,
+   //pwd : String
+
+//});
+//"start": "nodemon server.js";
