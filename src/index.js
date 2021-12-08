@@ -8,6 +8,9 @@ const session = require('express-session');
 const flash = require('connect-flash');
 
 
+
+
+
 //Inicializaciones
 const app = express();
 require('./database');
