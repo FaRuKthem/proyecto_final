@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -27,14 +27,14 @@
     "express-load": "^1.1.16",
     "express-session": "^1.17.2",
     "key.js": "^1.0.7",
-    "mongo-express": "^1.0.0-alpha.4",
+    "mongo-express": "^0.47.0",
     "morgan": "^1.10.0",
     "passport": "^0.5.0",
     "passport-local": "^1.0.0",
     "start": "^5.1.0"
   },
   "devDependencies": {
-    "mongoose": "^6.1.0",
+    "mongoose": "^6.1.1",
     "nodemon": "^2.0.15"
   },
   "description": ""
