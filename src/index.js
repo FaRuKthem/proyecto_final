@@ -1,14 +1,10 @@
-//servidor
 const express = require('express');
 const engine = require('ejs-mate');
 const path = require('path');
-const morgan = require('morgan');
+const morgan = require('morgan'); 
 const passport = require('passport');
 const session = require('express-session');
 const flash = require('connect-flash');
-const nodemon = require('nodemon');
-
-
 
 
 
@@ -46,18 +42,9 @@ app.use((req, res, next) => {
 
 //Routes
 app.use('/', require('./routes/index'));
+app.use('/css',express.static('pro'));
 
 //Incio de servidor 
 console.log('SERVIDOR EN PUERTO',3000);
 
-//nodemon
 
-//var mongoose = require('mongoose');
-
-//module.exports = mongoose.model('User', {
-
-  // email : String ,
-   //pwd : String
-
-//});
-//"start": "nodemon server.js";
