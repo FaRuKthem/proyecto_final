@@ -1,41 +1,35 @@
 {
   "name": "proyecto_final",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FaRuKthem/proyecto_final.git"
+    "url": "git+https://github.com/Hannia27/Proyecto_final.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FaRuKthem/proyecto_final/issues"
+    "url": "https://github.com/Hannia27/Proyecto_final/issues"
   },
-  "homepage": "https://github.com/FaRuKthem/proyecto_final#readme",
+  "homepage": "https://github.com/Hannia27/Proyecto_final#readme",
   "dependencies": {
-    "bcrypt": "^5.0.1",
-    "bcrypt-nodejs": "^0.0.3",
-    "bcryptjs": "^2.4.3",
+    "bcrypt-nodejs": "0.0.3",
     "connect-flash": "^0.1.1",
     "ejs-mate": "^3.0.0",
     "express": "^4.17.1",
-    "express-fileupload": "^1.2.1",
-    "express-load": "^1.1.16",
     "express-session": "^1.17.2",
-    "key.js": "^1.0.7",
-    "mongo-express": "^0.47.0",
+    "mongoose": "^6.0.11",
     "morgan": "^1.10.0",
     "passport": "^0.5.0",
-    "passport-local": "^1.0.0",
-    "start": "^5.1.0"
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "mongoose": "^6.1.1",
     "nodemon": "^2.0.15"
-  },
-  "description": ""
+  }
 }
