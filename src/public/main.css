@@ -1,0 +1,8 @@
+.box {
+    border: 5px solid darkblue;
+    height: 150px;
+    width: 200px;
+  }
+.bgcolor{
+  background-color: rgb(141, 211, 144);
+}
