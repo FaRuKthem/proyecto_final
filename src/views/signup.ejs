@@ -1,27 +1,160 @@
-<%- layout('layouts/main') %>
-
-<div class="row">
-  <div class="col-md-4 offset-md-4">
-    <div class="card mt-4 text-center">
-      <div class="card-header">
-        <h3>Registro</h3>
-      </div>
-      <div class="card-body">
-        <form action="/signup" method="POST">
-          <div class="form-group">
-            <input type="email" name="email" placeholder="Email" class="form-control mb-3">
+<%- layout('layouts/main.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <!--FONT AWESOME-->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css" type="Text/css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="card mb-3">
+          <div class="card-body">
+            <h3 class="text-center display-5">REGISTRO DE PERSONAL</h3>
+            <p class="text-center">Seleccione la opción más apropiada, recuerda; los hurones siempre vigilan.</p>
+            <br />
+            <br />
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <img src="https://petslife.com.mx/wp-content/uploads/2019/10/477431-1.jpg" class="card-img-top" alt="imagen10">
+                </div>
+                <div class="col order-5">
+                  <img src="https://sumedico.blob.core.windows.net/images/2020/02/21/5cosasquequizanosabiassobreelhuron.jpg" class="card-img-top" alt="imagen10">
+                </div>
+                <div class="col order-1">
+                  <br/>
+                  <img src="https://cdn.pixabay.com/photo/2018/10/04/07/18/ferret-3723085__340.jpg" class="card-img-top" alt="imagen10">
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <input type="password" name="password" placeholder="Password" class="form-control mb-3">
-          </div>
-          <div class="d-grid gap-2 col-6 mx-auto">
-            <button type="submit" class="btn btn-dark mb-3" class="fal fa-user-plus">Registrar</button>
-            
-          </div>    
-          
-          
-        </form>
+        </div>
+    </div>
+  <!--Cartas de boostrap-->
+  <div class="container" style="background-color: rgb(35, 50, 51);">
+    <div  class= "card text-dark bg-light" style="max-width: auto;" >
+      <div class="card-body bg-secondary">
+        <div class="container-fluid bg-secondary d-flex justify-content-center text-white" >
+          <h5 class="card-title"><center>SUPER ADMIN</center></i></h5>
+        </div>
+        <div class="container-fluid bg-secondary d-flex justify-content-center text-white" >
+          <p class="card-text"> Solo para hurones Admin. No entrar...</p>
+        </div>
+             <!---PARTE DONDE SE INGRESA EL CORREO.-->
+       <%- layout('layouts/main') %>
+       <div class="row">
+         <div class="col-md-5 offset-md-4">
+           <div class="card mt-4 text-center">
+             <div class="card-header  text-dark">
+               <h3>Registro</h3>
+             </div>
+             <div class="card-body ">
+               <form action="/signup" method="POST">
+                 <div class="form-group">
+                   <input type="email" name="email" placeholder="Email de hurón" class="form-control mb-3">
+                 </div>
+                 <div class="form-group">
+                   <input type="password" name="password" placeholder="Password secreto de hurón" class="form-control mb-3">
+                 </div>
+                 <div class="d-grid  gap-2 col-6 mx-auto">
+                   <button type="submit" class="btn btn-danger mb-3" class="fal fa-user-plus">Registrar</button>
+                 </div>    
+               </form>
+             </div>
+           </div>
+         </div>
+       </div>
       </div>
     </div>
   </div>
-</div>
+  <br />
+  <br />
+  <div class = "container"style="background-color: rgb(35, 50, 51);">
+    <div class= "card text-dark bg-light"  style="max-width: auto;">
+      <div class="card-body bg-secondary">
+        <div class="container-fluid bg-secondary d-flex justify-content-center text-white" >
+          <h5 class="card-title"><center>USUARIO NORMAL</center></i></h5>
+        </div>
+        <div class="container-fluid  d-flex justify-content-center text-white" >
+          <p class="card-text">Si no eres un hurón, registrate aquí . . .</p>
+        </div>
+             <!---PARTE DONDE SE INGRESA EL CORREO.-->
+       <%- layout('layouts/main') %>
+       <div class="row">
+         <div class="col-md-5 offset-md-4">
+           <div class="card mt-4 text-center">
+             <div class="card-header text-dark">
+               <h3>Registro</h3>
+             </div>
+             <div class="card-body ">
+               <form action="/signup" method="POST">
+                 <div class="form-group">
+                   <input type="email" name="email" placeholder="Email" class="form-control mb-3">
+                 </div>
+                 <div class="form-group">
+                   <input type="password" name="password" placeholder="Password" class="form-control mb-3">
+                 </div>
+                 <div class="d-grid  gap-2 col-6 mx-auto">
+                   <button type="submit" class="btn btn-dark mb-3" class="fal fa-user-plus">Registrar</button>
+                 </div>    
+               </form>
+             </div>
+           </div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+
+  <!---
+  <div class = "container">
+    <div class= "card text-dark bg-light"  style="max-width: auto;">
+      <div class="card-body bg-secondary">
+        <div class="container-fluid bg-secondary d-flex justify-content-center text-white" >
+          <h5 class="card-title"><center>INVITADO</center></i></h5>
+        </div>
+        <div class="container-fluid bg-secondary d-flex justify-content-center text-white" >
+          <p class="card-text">Cuenta para usuarios que no están en el sistema.</p>
+        </div>
+      <%- layout('layouts/main') %>
+       <div class="row">
+         <div class="col-md-5 offset-md-4">
+           <div class="card mt-4 text-center">
+             <div class="card-header text-dark">
+               <h3>Registro</h3>
+             </div>
+             <div class="card-body ">
+               <form action="/signup" method="POST">
+                 <div class="form-group">
+                   <input type="email" name="email" placeholder="Email" class="form-control mb-3">
+                 </div>
+                 <div class="form-group">
+                   <input type="password" name="password" placeholder="Password" class="form-control mb-3">
+                 </div>
+                 <div class="d-grid  gap-2 col-6 mx-auto">
+                   <button type="submit" class="btn btn-primary mb-3" class="fal fa-user-plus">Registrar</button>
+                 </div>    
+               </form>
+             </div>
+           </div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  -->
+
+
+    <!--JS Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
