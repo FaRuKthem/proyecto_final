@@ -31,19 +31,66 @@ router.get('/logout', (req, res, next) => {
   req.logout();
   res.redirect('/');
 });
-/*
-//todos las rutas debajo estaran dentro de la seguridad de las sessions
-router.use((req, res, next)=>{
-  isAuthenticated(req, res, next);
-  next();
-});
-*/
+
 router.get('/profile',isAuthenticated, (req, res, next) => {
   res.render('profile');
 });
 
-router.get('/products',isAuthenticated, (req, res, next) => {
-  res.send('Pagina de Productos');
+
+router.get('/control', (req, res, next)=>{
+  res.render('control');
+});
+
+router.get('/informacion', (req, res, next)=>{
+  res.render('informacion');
+});
+
+router.get('/sableb', (req, res, next)=>{
+  res.render('sableb');
+});
+
+router.get('/sablen', (req, res, next)=>{
+  res.render('sablen');
+});
+
+router.get('/inicio', (req, res, next)=>{
+    res.render('inicio');
+});
+
+router.get('/chocolate', (req, res, next)=>{
+  res.render('chocolate');
+});
+
+router.get('/hurones', (req, res, next)=>{
+    res.render('hurones');
+});
+
+router.get('/champan', (req, res, next)=>{
+  res.render('champan');
+});
+
+router.get('/canela', (req, res, next)=>{
+  res.render('canela');
+});
+
+router.get('/albino', (req, res, next)=>{
+  res.render('albino');
+});
+
+router.get('/plata', (req, res, next)=>{
+  res.render('plata');
+});
+
+router.get('/prueba', (req, res, next)=>{
+  res.render('prueba');
+});
+
+router.get('/nosotros', (req, res, next)=>{
+  res.render('nosotros');
+});
+
+router.get('/styles', (req, res, next)=>{
+  res.render('styles');
 });
 
 
@@ -53,9 +100,5 @@ function isAuthenticated(req, res, next) {
   }
   res.redirect('/')
 }
-
-var path = require("path");
-var Router = require('./modules/router/router');
-var router = new Router(path.join(__dirname,'routes'));
 
 module.exports = router;
